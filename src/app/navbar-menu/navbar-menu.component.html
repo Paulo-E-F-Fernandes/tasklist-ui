@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs justify-content-center d-none d-sm-flex" id="myTab" role="tablist">
+  <li class="nav-item" *ngFor="let item of menuItems">
+    <a class="nav-link {{item.active}}" id="{{item.id + '-tab'}}" data-toggle="tab" href="{{'#'+item.url}}" role="tab" attr.aria-controls="{{item.id}}" attr.aria-selected="{{item.active != ''}}">{{item.label}}</a>
+  </li>
+</ul><!-- ./nav-tabs -->

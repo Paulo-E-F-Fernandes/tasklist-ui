@@ -2,7 +2,11 @@
 /* **** COLORS **** */
 .navbar-background {
     background: #000000; /* Para browser que não suportam gradient */
-    background: linear-gradient(#000000, #a1a1a1);
+    background: linear-gradient(#000000, #7c7c7c);
     color: #fff;
     font-size: 18px;
+}
+
+.nav-item a {
+    color: #fff;
 }

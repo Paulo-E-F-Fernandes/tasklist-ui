@@ -1,31 +1,35 @@
 <div class="navbar-background">
-  <nav class="navbar navbar-expand-sm">
-      <!-- ESQUERDA -->
-      <!-- Botão com os menus para ser exibido quando a resolução é pequena. -->
-      <div class="d-block col-4 d-sm-none align-middle">
-          Esquerda
-      </div><!-- ./col-4.d-sm-none -->
-          
-      <!-- Logo do site exibido à esquerda da página em resoluções altas. -->
-      <div class="d-none d-sm-block col-sm-3">
-          <img src="{{ pageLogo }}" width="32" height="32" class="d-inline-block align-middle" alt="">
-      </div><!-- ./d-none.col-sm-3 -->
+    <nav class="navbar navbar-expand-sm">
+        <!-- ESQUERDA -->
+        <!-- Botão com os menus para ser exibido quando a resolução é pequena. -->
+        <div class="d-block col-4 d-sm-none align-middle">
+            Esquerda
+        </div><!-- ./col-4.d-sm-none -->
 
-      <!-- CENTRO -->
-      <!-- Logo do site exibido ao centro da página em resoluções pequenas. -->
-      <div class="d-block col-4 d-sm-none text-center">
-          <img src="{{ pageLogo }}" width="32" height="32" class="d-inline-block align-middle" alt="">
-      </div><!-- ./col-4.d-sm-none -->
-                  
-      <!-- Nome do site exibido ao centro da página em resoluções altas. -->
-      <div class="d-none d-sm-block col-sm-6 text-center navbar-title align-middle">
-          {{ pageName }}
-      </div><!-- ./d-none.col-sm-6 -->
-              
-      <!-- DIREITA -->
-      <!-- Opções do usuário exibido sempre à direita da página -->
-      <div class="col-4 col-sm-3 text-right align-middle">
-          Anônimo
-      </div><!-- ./col-4 col-sm-3 -->
-  </nav><!-- ./navbar -->
+        <!-- Logo do site exibido à esquerda da página em resoluções altas. -->
+        <div class="d-none d-sm-block col-sm-3">
+            <img src="{{ pageLogo }}" width="32" height="32" class="d-inline-block align-middle" alt="">
+        </div><!-- ./d-none.col-sm-3 -->
+
+        <!-- CENTRO -->
+        <!-- Logo do site exibido ao centro da página em resoluções pequenas. -->
+        <div class="d-block col-4 d-sm-none text-center">
+            <img src="{{ pageLogo }}" width="32" height="32" class="d-inline-block align-middle" alt="">
+        </div><!-- ./col-4.d-sm-none -->
+
+        <!-- Nome do site exibido ao centro da página em resoluções altas. -->
+        <div class="d-none d-sm-block col-sm-6 text-center navbar-title align-middle">
+            {{ pageName }}
+        </div><!-- ./d-none.col-sm-6 -->
+
+        <!-- DIREITA -->
+        <!-- Opções do usuário exibido sempre à direita da página -->
+        <div class="col-4 col-sm-3 text-right align-middle">
+            Anônimo
+        </div><!-- ./col-4 col-sm-3 -->
+    </nav><!-- ./navbar -->
+
+    <!-- Opções de menu do usuário -->
+    <app-navbar-menu></app-navbar-menu>
+
 </div><!-- ./navbar-background -->
