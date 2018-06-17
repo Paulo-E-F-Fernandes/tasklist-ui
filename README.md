@@ -44,6 +44,11 @@
 	**OBS.:** Para que o *Angular CLI* não gere o arquivo de teste, precisa adicionar o parâmetro `--spec=false`, por exemplo `ng g c [NOME_COMPONENTE] --spec=false`.
 
 ## Configurações da aplicação
+* Alterar ***favicon.ico***:
+	* Substituir o arquivo ***favicon.ico*** localizado em ***src/***. Este arquivo é referenciado no ***index.html***.
+* Alterar o logo da aplicação:
+	* Substituir o arquivo ***logo.png*** localizado em ***src*/*assets*/*img***. O logo é utilizado em na variável ***pageLogo*** do arquivo ***navbar.component.ts***, localizado em ***src*/*app*/*navbar*/**.
+ 
 
 ---
 # Opções de execução
