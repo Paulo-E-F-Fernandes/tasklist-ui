@@ -52,6 +52,10 @@
 	* Utilizar o arquivo ***styles.css*** localizado em ***src/***.
 
 ---
+# Story Board
+* [Trello](https://trello.com/b/3LxDAX2z/projeto-template)
+
+---
 # Opções de execução
 
 ## Build da aplicação
