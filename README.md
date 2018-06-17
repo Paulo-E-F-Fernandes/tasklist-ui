@@ -1,26 +1,38 @@
 # TemplateUi
 
-Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8, através do comando `ng new template-ui`.
 
+---
 ## Tecnologias
 
 Este projeto foi estruturado para utilizar as seguintes tecnologias:
 
-1. [Angular 6](https://angular.io/);
-2. [PrimeNG](https://www.primefaces.org/primeng/#/);
-3. [Bootstrap4](https://getbootstrap.com/).
+* [Angular 6](https://angular.io/);
+* [PrimeNG](https://www.primefaces.org/primeng/#/);
+* [Bootstrap4](https://getbootstrap.com/).
 
+---
 ## Pré-requisitos
 
-1. IDE para compativél com TypeScript (Ex.: *Visual Studio Code* [](https://code.visualstudio.com/));
-2. *Node.js/npm* [](https://nodejs.org/en/). O *npm* é instalado junto com o *Node.js*;
-3. *Angular CLI* [](https://cli.angular.io/). Para instalar o *Angular CLI* usaremos o *npm*:
-* Abrir um janela de terminal;
-* Executar o comando `npm install -g @angular/cli => -g = global`.
+* O versionador de código [*Git*](https://git-scm.com/);
+* IDE para compatível com [*TypeScript*](https://www.typescriptlang.org/) (Ex.: [*Visual Studio Code*](https://code.visualstudio.com/));
+* [*Node.js*](https://nodejs.org/en/) e [*npm*](https://www.npmjs.com/). O *npm* é instalado junto com o *Node.js*;
+* [*Angular CLI*](https://cli.angular.io/). Para instalar o *Angular CLI* usaremos o *npm*. Para isso é necessário  1) Abrir um janela de terminal e 2) executar o comando `npm install -g @angular/cli => -g = global`.
 
-## Development server
+---
+## Configuração do ambiente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Clonar os fontes do repositório *git* via **ssh** `git clone git@bitbucket.org:pauloeffernandes/template-ui.git` **OU** **https** `git clone https://pauloeffernandes@bitbucket.org/pauloeffernandes/template-ui.git`;
+* 
+
+---
+## Servidor de desenvolvimento
+
+Para executar o servidor de desenvolvimento é necessário abrir uma janela de terminal e executar o comando `ng serve`, com isso a aplicação será publicada em um servidor *Node.js*. Para acessar a aplicação é só colocar a URL `http://localhost:4200/` no browser.
+
+**OBS.:** Qualquer alteração nos códigos fontes da aplicação será automaticamente recarregada no browser.
+
+
 
 ## Code scaffolding
 
