@@ -48,7 +48,8 @@
 	* Substituir o arquivo ***favicon.ico*** localizado em ***src/***. Este arquivo é referenciado no ***index.html***.
 * Alterar o logo da aplicação:
 	* Substituir o arquivo ***logo.png*** localizado em ***src*/*assets*/*img***. O logo é utilizado em na variável ***pageLogo*** do arquivo ***navbar.component.ts***, localizado em ***src*/*app*/*navbar*/**.
- 
+* **Cores** da aplicação:
+	* Utilizar o arquivo ***styles.css*** localizado em ***src/***.
 
 ---
 # Opções de execução
