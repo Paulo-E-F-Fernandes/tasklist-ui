@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+/* **** COLORS **** */
+.navbar-background {
+    background: #000000; /* Para browser que não suportam gradient */
+    background: linear-gradient(#000000, #a1a1a1);
+    color: #fff;
+    font-size: 18px;
+}
