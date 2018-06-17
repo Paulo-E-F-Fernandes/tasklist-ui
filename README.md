@@ -1,93 +1,68 @@
-# TemplateUi
+# Projeto Template-UI
 
-Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+* Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8, através do comando `ng new template-ui`.
 
+---
 ## Tecnologias
 
-Este projeto foi estruturado para utilizar as seguintes tecnologias:
+* Este projeto foi estruturado para utilizar as seguintes tecnologias:
 
-1. [Angular 6](https://angular.io/);
-2. [PrimeNG](https://www.primefaces.org/primeng/#/);
-3. [Bootstrap4](https://getbootstrap.com/).
+	* [Angular 6](https://angular.io/);
+	* [PrimeNG](https://www.primefaces.org/primeng/#/);
+	* [Bootstrap4](https://getbootstrap.com/).
 
+---
 ## Pré-requisitos
 
-1. IDE para compativél com TypeScript (Ex.: *Visual Studio Code* [](https://code.visualstudio.com/));
-2. *Node.js/npm* [](https://nodejs.org/en/). O *npm* é instalado junto com o *Node.js*;
-3. *Angular CLI* [](https://cli.angular.io/). Para instalar o *Angular CLI* usaremos o *npm*:
-* Abrir um janela de terminal;
-* Executar o comando `npm install -g @angular/cli => -g = global`.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
-
-
-------------------------------------------------------
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
-
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
-
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+* O versionador de código [*Git*](https://git-scm.com/);
+* IDE para compatível com [*TypeScript*](https://www.typescriptlang.org/) (Ex.: [*Visual Studio Code*](https://code.visualstudio.com/));
+* [*Node.js*](https://nodejs.org/en/) e [*npm*](https://www.npmjs.com/). O *npm* é instalado junto com o *Node.js*;
+* [*Angular CLI*](https://cli.angular.io/). Para instalar o *Angular CLI* usaremos o *npm*. Para isso é necessário  1) Abrir um janela de terminal e 2) executar o comando `npm install -g @angular/cli => -g = global`.
 
 ---
+## Configuração do ambiente
 
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+* Clonar os fontes do repositório *git* via **ssh** `git clone git@bitbucket.org:pauloeffernandes/template-ui.git` **OU** **https** `git clone https://pauloeffernandes@bitbucket.org/pauloeffernandes/template-ui.git`;
+* Entrar no diretório **template-ui** que foi criado após o clone do repositório, abrir um terminal neste diretório e executar o comando `npm install`, com isso o diretório **node_modules** é criado com as dependências do projeto;
+* Após a execução do **npm install** já é possível iniciar o servidor com o comando `ng serve`;
+* Importar o projeto no *Visual Studio Code*, para isso, após abrir a *IDE*, selecionar *File* > *Open Folder...* e selecionar o diretório do **template-ui**;
+* Após importado o projeto, para facilitar podemos abrir um terminal dentro da *IDE*, através do menu *View* > *Integrated Terminal*
 
 ---
+## Servidor de desenvolvimento
 
-## Create a file
+* Para executar o servidor de desenvolvimento é só executar no terminal o comando `ng serve`, com isso a aplicação será publicada em um servidor *Node*. Para acessar a aplicação é só colocar a URL `http://localhost:4200/` no browser.
 
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+	**OBS.:** Qualquer alteração nos códigos fontes da aplicação será automaticamente recarregada no browser.
 
 ---
+## Comandos para criar os artefatos
 
-## Clone a repository
+* Para gerar um novo componente execute o comando `ng g c [NOME_COMPONENTE]`.
+* Para gerar um novo serviço execute o comando `ng g s [NOME_SERVIÇO]`.
+	
+	**OBS.:** Para que o *Angular CLI* não gere o arquivo de teste, precisa adicionar o parâmetro `--spec=false`, por exemplo `ng g c [NOME_COMPONENTE] --spec=false`.
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+## Configurações da aplicação
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+---
+# Opções de execução
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+## Build da aplicação
+
+* Executar o comando `ng build` para buildar o projeto. O artefato gerado será armazenado no diretório `dist/`. Usar a *flag* `--prod` para gerar a aplicação de produção.
+
+---
+## Executar os testes unitários
+
+* Para executar os teste unitários execute o comando `ng test`. Será executado os testes via [Karma](https://karma-runner.github.io).
+
+---
+## Executar os testes *end-to-end*
+
+* Para executar testes *end-to-end*, execute o comando `ng e2e`. Será executado os testes via [Protractor](http://www.protractortest.org/).
+
+---
+# Ajuda
+
+* Para ajuda com o Angular CLI use `ng help` ou acesse [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
