@@ -3,7 +3,7 @@
         <!-- ESQUERDA -->
         <!-- Botão com os menus para ser exibido quando a resolução é pequena. -->
         <div class="d-block col-4 d-sm-none align-middle">
-            Esquerda
+            <app-navbar-sidebar [menuItems]="menuItemsReturned"></app-navbar-sidebar>
         </div><!-- ./col-4.d-sm-none -->
 
         <!-- Logo do site exibido à esquerda da página em resoluções altas. -->
@@ -30,6 +30,6 @@
     </nav><!-- ./navbar -->
 
     <!-- Opções de menu do usuário -->
-    <app-navbar-menu></app-navbar-menu>
+    <app-navbar-menu [menuItems]="menuItemsReturned"></app-navbar-menu>
 
 </div><!-- ./navbar-background -->

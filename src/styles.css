@@ -7,6 +7,28 @@
     font-size: 18px;
 }
 
-.nav-item a {
+.no-background {
+    background: transparent !important;
+    border: 0px !important;
+}
+
+/* Menus */
+.nav-tabs .nav-item a {
     color: #fff;
 }
+
+.nav-tabs .nav-link.active {
+    color: #2e3133;
+    background-color: #fff;
+}
+
+/* Sidebar */
+.nav-pills .nav-item a {
+    color: #fff;
+} 
+
+.nav-pills .nav-link.active {
+    color: #2e3133;
+    background-color: #fff;
+}
+
