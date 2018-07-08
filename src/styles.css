@@ -7,6 +7,13 @@
     font-size: 18px;
 }
 
+.sidebar-background {
+    background: #000000; /* Para browser que não suportam gradient */
+    background: linear-gradient(#000000, #7c7c7c);
+    color: #fff;
+    font-size: 18px;
+}
+
 .no-background {
     background: transparent !important;
     border: 0px !important;
@@ -32,3 +39,6 @@
     background-color: #fff;
 }
 
+.ui-sidebar-left {
+    width: 15em !important;
+}
