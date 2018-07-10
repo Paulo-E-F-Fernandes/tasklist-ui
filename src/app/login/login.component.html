@@ -1,0 +1,40 @@
+<div>
+  <button type="button" class="btn no-background dropdown-toggle font-color-secundary font-size-18 no-box-shadow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ userName }}
+  </button>
+  <div class="dropdown-menu dropdown-menu-right login-background">
+    <form class="px-4 py-3">
+      <div class="form-group">
+        <label for="login-email">{{ emailLabel }}</label>
+        <input type="email" class="form-control" id="login-email" placeholder="{{ emailPlaceholder }}">
+      </div>
+      <div class="form-group">
+        <label for="login-password">{{ passwordLabel }}</label>
+        <input type="password" class="form-control" id="login-password" placeholder="{{ passwordPlaceholder }}">
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="login-remember-me">
+        <label class="form-check-label" for="login-remember-me">
+          {{ rememberMeLabel }}
+        </label>
+      </div>
+        <button type="submit" class="btn btn-primary btn-block">{{ loginButton }}</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">{{ signUpLabel }}</a>
+    <a class="dropdown-item" href="#">{{ forgetPasswordLabel }}</a>
+  </div>
+</div>
+
+
+<!-- 
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <div class="dropdown-divider"></div>
+    <button class="dropdown-item" type="button">Something else here</button>
+-->
+
+
+<div class="dropdown-menu">
+    
+  </div>

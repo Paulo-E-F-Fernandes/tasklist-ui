@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
 import { NavbarSidebarComponent } from './navbar-sidebar/navbar-sidebar.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     NavbarMenuComponent,
-    NavbarSidebarComponent
+    NavbarSidebarComponent,
+    LoginComponent
   ],
   imports: [
     // Angular

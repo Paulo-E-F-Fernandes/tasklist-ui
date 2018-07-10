@@ -1,17 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 /* **** COLORS **** */
+.font-color-secundary {
+    color: #fff;
+}
+
+/* **** SIZES **** */
+.font-size-18 {
+    font-size: 18px;
+}
+
+/* **** COMPONENTS **** */
+/* Backgrounds */
 .navbar-background {
     background: #000000; /* Para browser que não suportam gradient */
     background: linear-gradient(#000000, #7c7c7c);
-    color: #fff;
-    font-size: 18px;
 }
 
 .sidebar-background {
     background: #000000; /* Para browser que não suportam gradient */
     background: linear-gradient(#000000, #7c7c7c);
-    color: #fff;
-    font-size: 18px;
+}
+
+.login-background {
+    background: #d0d0d0;
 }
 
 .no-background {

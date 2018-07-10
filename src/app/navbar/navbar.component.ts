@@ -11,8 +11,8 @@ import { Menu } from '../domain/menu';
 })
 export class NavbarComponent implements OnInit {
 
-  pageName = 'Page-Name';
-  pageLogo = '/assets/img/logo.png';
+  pageName : string = 'Page-Name';
+  pageLogo : string = '/assets/img/logo.png';
   menuItemsReturned : Menu[] = [];
 
   constructor() { }
