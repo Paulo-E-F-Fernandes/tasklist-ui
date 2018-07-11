@@ -43,6 +43,11 @@
 	
 	**OBS.:** Para que o *Angular CLI* não gere o arquivo de teste, precisa adicionar o parâmetro `--spec=false`, por exemplo `ng g c [NOME_COMPONENTE] --spec=false`.
 
+* Para gerar uma nova classe execute o comando `ng generate class [NOME_DIRETÓRIO]/[NOME_CLASSE]`.
+
+	* Criar as classes que representam as entidades no diretório **domain**.
+	* Criar as classes relativas a internacionalização no diretório **118n**. 
+
 ## Configurações da aplicação
 * Alterar ***favicon.ico***:
 	* Substituir o arquivo ***favicon.ico*** localizado em ***src/***. Este arquivo é referenciado no ***index.html***.
