@@ -46,7 +46,7 @@
 * Para gerar uma nova classe execute o comando `ng generate class [NOME_DIRETÓRIO]/[NOME_CLASSE]`.
 
 	* Criar as classes que representam as entidades no diretório **domain**.
-	* Criar as classes relativas a internacionalização no diretório **118n**. 
+	* Criar as classes relativas a internacionalização no diretório **i18n**. 
 
 ## Configurações da aplicação
 * Alterar ***favicon.ico***:
