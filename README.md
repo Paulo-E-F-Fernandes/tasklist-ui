@@ -39,7 +39,7 @@
 ## Comandos para criar os artefatos
 
 * Para gerar um novo componente execute o comando `ng g c [NOME_COMPONENTE]`.
-* Para gerar um novo serviço execute o comando `ng g s [NOME_SERVIÇO]`.
+* Para gerar um novo serviço execute o comando `ng g s services/[NOME_DIRETÓRIO]/[NOME_SERVIÇO]`.
 	
 	**OBS.:** Para que o *Angular CLI* não gere o arquivo de teste, precisa adicionar o parâmetro `--spec=false`, por exemplo `ng g c [NOME_COMPONENTE] --spec=false`.
 
