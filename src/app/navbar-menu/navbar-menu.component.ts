@@ -11,7 +11,7 @@ import { Menu } from '../domain/menu';
 })
 export class NavbarMenuComponent implements OnInit {
 
-  @Input() menuItems : Menu[];
+  @Input() menuItems: Menu[];
   
   constructor() { }
 

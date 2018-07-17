@@ -11,16 +11,16 @@ import { Menu } from '../domain/menu';
 })
 export class NavbarSidebarComponent implements OnInit {
 
-  @Input() menuItems : Menu[];
-  sidebarTitle : string = 'Sidebar Title';
-  display : boolean = false;
+  @Input() menuItems: Menu[];
+  sidebarTitle: string = 'Sidebar Title';
+  display: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  showMenus(show : boolean) {
+  showMenus(show: boolean) {
     this.display = show;
   }
 

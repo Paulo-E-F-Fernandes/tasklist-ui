@@ -1,0 +1,10 @@
+{
+    "LOGIN": {
+        "ANONYMOUS": "Anônimo",
+        "EMAIL_LABEL": "E-mail",
+        "FORGET_PASSWORD_LABEL": "Esqueceu a senha?",
+        "PASSWORD_LABEL": "Senha",
+        "REMEMBER_ME_LABEL": "Manter conectado?",
+        "SIGN_UP_LABEL": "Novo por aqui? Cadastre-se."
+    }
+}

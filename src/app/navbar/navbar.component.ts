@@ -11,11 +11,11 @@ import { Menu } from '../domain/menu';
 })
 export class NavbarComponent implements OnInit {
 
-  pageName : string = 'Page-Name';
-  pageLogo : string = '/assets/img/logo.png';
-  menuItemsReturned : Menu[] = [];
+  pageName: string = 'Page-Name';
+  pageLogo: string = '/assets/img/logo.png';
+  menuItemsReturned: Menu[] = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() { 
     // mock - será ajustado na Task #11
