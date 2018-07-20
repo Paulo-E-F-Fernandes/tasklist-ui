@@ -13,8 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   
   public constructor (private titleService: Title, public translateService: TranslateService) {
-    let pageTitle = 'Page Title'; 
-    this.titleService.setTitle(pageTitle);
+    this.titleService.setTitle('Task List');
     
     translateService.setDefaultLang('pt');
     translateService.use('pt');

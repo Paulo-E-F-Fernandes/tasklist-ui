@@ -1,6 +1,10 @@
 .navbar-title {
     font-size: 35px;
-    text-transform: uppercase;
+    color: #FFFFFF;
     text-shadow: 1px 1px 2px black;
     font-family: "Times New Roman";
+}
+
+.background-custom {
+    background: #3a3aee;
 }

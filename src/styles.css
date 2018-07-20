@@ -1,8 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* **** COLORS **** */
-.font-color-secundary {
-    color: #fff;
-}
 
 /* **** SIZES **** */
 .font-size-18 {
@@ -11,45 +7,8 @@
 
 /* **** COMPONENTS **** */
 /* Backgrounds */
-.navbar-background {
-    background: #000000; /* Para browser que não suportam gradient */
-    background: linear-gradient(#000000, #7c7c7c);
-}
-
-.sidebar-background {
-    background: #000000; /* Para browser que não suportam gradient */
-    background: linear-gradient(#000000, #7c7c7c);
-}
-
-.login-background {
-    background: #d0d0d0;
-}
 
 .no-background {
     background: transparent !important;
     border: 0px !important;
-}
-
-/* Menus */
-.nav-tabs .nav-item a {
-    color: #fff;
-}
-
-.nav-tabs .nav-link.active {
-    color: #2e3133;
-    background-color: #fff;
-}
-
-/* Sidebar */
-.nav-pills .nav-item a {
-    color: #fff;
-} 
-
-.nav-pills .nav-link.active {
-    color: #2e3133;
-    background-color: #fff;
-}
-
-.ui-sidebar-left {
-    width: 15em !important;
 }

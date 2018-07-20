@@ -1,10 +1,29 @@
 {
-    "LOGIN": {
-        "ANONYMOUS": "Anônimo",
-        "EMAIL_LABEL": "E-mail",
-        "FORGET_PASSWORD_LABEL": "Esqueceu a senha?",
-        "PASSWORD_LABEL": "Senha",
-        "REMEMBER_ME_LABEL": "Manter conectado?",
-        "SIGN_UP_LABEL": "Novo por aqui? Cadastre-se."
+    "BOARD": {
+        "BACKLOG": "Backlog",
+        "CANCEL": "Cancelar",
+        "CONCLUSION_DATE": "Data de Conclusão",
+        "CREATE_DATE": "Data de Criação",
+        "DESCRIPTION": "Descrição",
+        "DONE": "Done",
+        "EDIT_DATE": "Data de Edição",
+        "LABEL": {
+            "DESCRIPTION": "Descrição",
+            "STATUS": "Status",
+            "TITLE": "Título"
+        },
+        "PLACEHOLDER": {
+            "DESCRIPTION": "Informe a descrição da task...",
+            "STATUS": "Selecione o status da task...",
+            "TITLE": "Informe o título da task..." 
+        },
+        "PROGRESS": "In Progress",
+        "NEW_TASK": "Adicionar nova Task",
+        "SAVE": "Adicionar",
+        "TESTING": "Testing"
+    },
+
+    "PAGE" : {
+        "TITLE": "Task List"
     }
 }

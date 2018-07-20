@@ -1,0 +1,117 @@
+<div class="row">
+
+  <!-- Coluna Backlog -->
+  <div class="col-12 col-sm-3">
+    <p-panel>
+      <p-header>
+        <span>{{ 'BOARD.BACKLOG' | translate }}</span>
+        <button type="button" pButton class="float-right" (click)="newTask();" icon="fa fa-plus"></button>
+      </p-header>
+      <p-card class="col-12" *ngFor="let task of (tasksReturned | task: 'backlog')">
+        <div class="board-text"><span class="board-id">{{ task.id }}</span>{{ task.titulo }}</div>
+        <div class="dropdown-divider"></div>
+        <div class="board-label">{{ 'BOARD.DESCRIPTION' | translate }}</div>
+        <div class="board-text">{{ task.descricao }}</div>
+        <div class="dropdown-divider"></div>
+        <div class="board-label">{{ 'BOARD.CREATE_DATE' | translate }}</div>
+        <div class="board-text">{{ task.dtCriacao | date: 'dd/MM/yyyy HH:mm:ss' }}</div>
+        <div class="dropdown-divider"></div>
+        <p-footer>
+          <button type="button" pButton (click)="closeNewTask()" icon="fa fa-edit" class="form-control offset-7 col-2 btn"></button>
+          <button type="button" pButton (click)="removeTask(task)" icon="fa fa-trash" class="form-control offset-1 col-2 btn"></button>
+        </p-footer>
+      </p-card>
+    </p-panel>
+  </div><!-- ./col-12 col-sm-3 -->
+  
+  <!-- Coluna In Progress -->
+  <div class="col-12 col-sm-3">
+    <p-panel header="{{ 'BOARD.PROGRESS' | translate }}">
+      <p-card class="col-12" *ngFor="let task of (tasksReturned | task: 'progress')">
+          <div class="board-text"><span class="board-id">{{ task.id }}</span>{{ task.titulo }}</div>
+        <div class="dropdown-divider"></div>
+        <div class="board-label">{{ 'BOARD.DESCRIPTION' | translate }}</div>
+        <div class="board-text">{{ task.descricao }}</div>
+        <div class="dropdown-divider"></div>
+        <div class="board-label">{{ 'BOARD.CREATE_DATE' | translate }}</div>
+        <div class="board-text">{{ task.dtCriacao | date: 'dd/MM/yyyy HH:mm:ss' }}</div>
+        <div class="board-label">{{ 'BOARD.EDIT_DATE' | translate }}</div>
+        <div class="board-text">{{ task.dtEdicao | date: 'dd/MM/yyyy HH:mm:ss' }}</div>
+        <p-footer>
+          <button type="button" pButton (click)="closeNewTask()" icon="fa fa-edit" class="form-control offset-7 col-2 btn"></button>
+          <button type="button" pButton (click)="removeTask(task)" icon="fa fa-trash" class="form-control offset-1 col-2 btn"></button>
+        </p-footer>
+      </p-card>
+    </p-panel>
+  </div><!-- ./col-12 col-sm-3 -->
+
+  <!-- Coluna Testing -->
+  <div class="col-12 col-sm-3">
+    <p-panel header="{{ 'BOARD.TESTING' | translate }}">
+    <p-card class="col-12" *ngFor="let task of (tasksReturned | task: 'testing')">
+        <div class="board-text"><span class="board-id">{{ task.id }}</span>{{ task.titulo }}</div>
+        <div class="dropdown-divider"></div>
+        <div class="board-label">{{ 'BOARD.DESCRIPTION' | translate }}</div>
+        <div class="board-text">{{ task.descricao }}</div>
+        <div class="dropdown-divider"></div>
+        <div class="board-label">{{ 'BOARD.CREATE_DATE' | translate }}</div>
+        <div class="board-text">{{ task.dtCriacao | date: 'dd/MM/yyyy HH:mm:ss' }}</div>
+        <div class="board-label">{{ 'BOARD.EDIT_DATE' | translate }}</div>
+        <div class="board-text">{{ task.dtEdicao | date: 'dd/MM/yyyy HH:mm:ss' }}</div>
+        <p-footer>
+          <button type="button" pButton (click)="closeNewTask()" icon="fa fa-edit" class="form-control offset-7 col-2 btn"></button>
+          <button type="button" pButton (click)="removeTask(task)" icon="fa fa-trash" class="form-control offset-1 col-2 btn"></button>
+        </p-footer>
+      </p-card>
+    </p-panel>
+  </div><!-- ./col-12 col-sm-3 -->
+  
+  <!-- Coluna Done -->
+  <div class="col-12 col-sm-3">
+    <p-panel header="{{ 'BOARD.DONE' | translate }}">
+      <p-card class="col-12" *ngFor="let task of (tasksReturned | task: 'done')">
+        <div class="board-text"><span class="board-id">{{ task.id }}</span>{{ task.titulo }}</div>
+        <div class="dropdown-divider"></div>
+        <div class="board-label">{{ 'BOARD.DESCRIPTION' | translate }}</div>
+        <div class="board-text">{{ task.descricao }}</div>
+        <div class="dropdown-divider"></div>
+        <div class="board-label">{{ 'BOARD.CREATE_DATE' | translate }}</div>
+        <div class="board-text">{{ task.dtCriacao | date: 'dd/MM/yyyy HH:mm:ss' }}</div>
+        <div class="board-label">{{ 'BOARD.CONCLUSION_DATE' | translate }}</div>
+        <div class="board-text">{{ task.dtConclusao | date: 'dd/MM/yyyy HH:mm:ss' }}</div>
+        <p-footer>
+          <button type="button" pButton (click)="closeNewTask()" icon="fa fa-edit" class="form-control offset-7 col-2 btn"></button>
+          <button type="button" pButton (click)="removeTask(task)" icon="fa fa-trash" class="form-control offset-1 col-2 btn"></button>
+        </p-footer>
+      </p-card>
+    </p-panel>
+  </div><!-- ./col-12 col-sm-3 -->
+
+</div><!-- ./row -->
+
+
+<p-dialog header="{{ 'BOARD.NEW_TASK' | translate}} " [(visible)]="showAddTask" [modal]="true" [responsive]="true" [width]="600" [minWidth]="300" [minY]="70" 
+        [maximizable]="true" [baseZIndex]="10000">
+  <form #taskForm="ngForm" (ngSubmit)="addTask(taskForm)">
+    <div class="form-group">
+      <label for="taskTitle">{{ 'BOARD.LABEL.TITLE' | translate }}</label>
+      <input pInputText ngModel name="titulo" maxlength="64" [required]="true" class="form-control" id="taskTitle" placeholder="{{ 'BOARD.PLACEHOLDER.TITLE' | translate}}">
+    </div>
+    <div class="form-group">
+      <label for="taskStatus">{{ 'BOARD.LABEL.STATUS' | translate }}</label>
+      <select class="form-control" ngModel name="status" id="taskStatus" required="true">
+        <ng-template ngFor let-status [ngForOf]="statusList">
+          <option value="{{ status.value }}">{{ status.label }}</option>
+        </ng-template>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="taskDescription">{{ 'BOARD.LABEL.DESCRIPTION' | translate }}</label>
+      <textarea pInputTextarea ngModel name="descricao" [rows]="5" [cols]="51" [required]="false" class="form-control" id="taskDescription" placeholder="{{ 'BOARD.PLACEHOLDER.DESCRIPTION' | translate }}"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" pButton label="{{ 'BOARD.SAVE' | translate }}" [disabled]="taskForm.invalid" class="form-control offset-1 col-4 btn"></button>
+      <button type="button" pButton (click)="closeNewTask()" label="{{ 'BOARD.CANCEL' | translate }}" class="form-control offset-2 col-4 btn"></button>
+    </div>
+  </form>
+</p-dialog>

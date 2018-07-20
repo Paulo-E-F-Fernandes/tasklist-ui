@@ -1,0 +1,25 @@
+.board-id:before {
+    content: "#"
+}
+
+.board-id {
+    color: #7e7e7e;
+    font-size: 11px; 
+}
+
+.board-id:after{
+    content: ". ";
+}
+
+.board-label {
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+.board-label:after {
+    content: ": ";
+}
+
+.board-text {
+    font-size: 12px;
+}
