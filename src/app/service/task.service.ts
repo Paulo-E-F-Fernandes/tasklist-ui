@@ -10,7 +10,7 @@ import { Task } from '../domain/task';
 })
 export class TaskService {
 
-  taskUrl: string = 'http://localhost:8080/tasklist-api/task';
+  taskUrl: string = 'http://localhost:8080/task';
 
   constructor(private http: HttpClient) { }
 
