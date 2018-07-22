@@ -10,7 +10,7 @@ import { Status } from '../domain/status';
 })
 export class StatusService {
 
-  taskUrl: string = 'http://localhost:8080/status';
+  taskUrl: string = 'https://tasklist-api.herokuapp.com/status';
 
   constructor(private http: HttpClient) { }
 
