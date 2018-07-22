@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { Task } from '../domain/task';
 import { FormControl } from '@angular/forms';
 import { Status } from '../domain/status';
+import { StatusService } from '../service/status.service';
 import { TaskService } from '../service/task.service';
 
 @Component({
@@ -17,30 +18,33 @@ export class BoardComponent implements OnInit {
   statusList: Status[] = [];
   tasksReturned: Task[] = [];
   showAddTask: boolean = false;
+  draggedTask: Task;
+  task: Task;
 
-  constructor(private taskService: TaskService) {
-    this.statusList.push({value: 'backlog', label: 'Backlog'});
-    this.statusList.push({value: 'progress', label: 'In Progress'});
-    this.statusList.push({value: 'testing', label: 'Testing'});
-    this.statusList.push({value: 'done', label: 'Done'});
-
+  constructor(private taskService: TaskService, statusService: StatusService) {
+    statusService.generateCombo().subscribe((status => this.statusList = status));
+    this.task = new Task();
     this.findAll();
   }
 
   ngOnInit() {}
-
-  newTask() {
-    this.showAddTask = true;
-  }
-
+  
   closeNewTask() {
     this.showAddTask = false;
   }
 
-  addTask(form: FormControl) {
-    this.taskService.addTask(form.value).subscribe(() => {
-      form.reset();
-      this.closeNewTask();
+  newTaskClick() {
+    this.task = new Task();
+    this.showAddTask = true;
+  }
+
+  editTaskClick(task: Task) {
+    this.task = Object.assign({}, task);
+    this.showAddTask = true;
+  }
+
+  removeTaskClick(task: Task) {
+    this.taskService.removeTask(task).subscribe(() => {
       this.findAll();
     });
   }
@@ -51,11 +55,52 @@ export class BoardComponent implements OnInit {
     });
   }
 
-  removeTask(task: Task) {
-    console.log(`task - ${task.id}`);
-    this.taskService.removeTask(task).subscribe(() => {
-      this.findAll();
-    });
+  saveTaskSubmit(form: FormControl) {
+    if (this.task.id !== undefined) {
+      this.editTask(form);
+    } else {
+      this.addTask(form);
+    }
+  }
+  
+  addTask = (form: FormControl) => {
+    this.taskService.addTask(form.value).subscribe(() => this.successCallback(form));
+  }
+
+  editTask = (form: FormControl) => {
+    this.taskService.updateTask(this.task).subscribe(() => this.successCallback(form));
+  }
+  
+  successCallback = (form: FormControl) => {
+    form.reset();
+    this.closeNewTask();
+    this.findAll();
+  };
+
+  dragStart(event, task: Task) {
+    this.draggedTask = task;
+  }
+
+  dragEnd(event) {
+    this.draggedTask = null;
+  }
+
+  drop(event, status: string) {
+    if (this.draggedTask) {
+      let index = this.tasksReturned.indexOf(this.draggedTask);
+      
+      if (index !== -1) {
+        let selectedTask: Task[] = this.tasksReturned.splice(index, 1);
+
+        if (selectedTask.length > 0) {
+          selectedTask[0].status = status;
+          
+          this.taskService.updateTask(selectedTask[0]).subscribe((task: Task) => {
+            this.tasksReturned = [...this.tasksReturned, task];
+          });
+        }
+      }
+    }
   }
 
 }

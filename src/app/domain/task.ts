@@ -8,15 +8,14 @@ export class Task {
     private _dtEdicao: Date;
     private _dtConclusao: Date;
 
-    constructor(id: number, titulo: string, status: string, descricao: string, dtCriacao: Date, dtEdicao: Date,
-                dtConclusao: Date) {
-        this._id = id;
-        this._titulo = titulo;
-        this._status = status;
-        this._descricao = descricao;
-        this._dtCriacao = dtCriacao;
-        this._dtEdicao = dtEdicao;
-        this._dtConclusao = dtConclusao;
+    constructor() {
+        this.id = undefined;
+        this.titulo = undefined;
+        this.status = undefined;
+        this.descricao = undefined;
+        this.dtCriacao = undefined;
+        this.dtEdicao = undefined;
+        this.dtConclusao = undefined;
     }
 
     get id() : number {

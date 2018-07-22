@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DialogModule } from 'primeng/dialog';
+import { DragDropModule } from 'primeng/dragdrop';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
 import { PanelModule } from 'primeng/panel';
@@ -46,6 +47,7 @@ export function HttpLoaderFactory(httpClient : HttpClient) {
     ButtonModule,
     CardModule,
     DialogModule,
+    DragDropModule,
     InputTextareaModule,
     InputTextModule,
     PanelModule,
