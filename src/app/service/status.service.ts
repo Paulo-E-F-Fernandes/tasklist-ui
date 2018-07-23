@@ -10,10 +10,10 @@ import { Status } from '../domain/status';
 })
 export class StatusService {
 
-  taskUrl: string = 'https://tasklist-api.herokuapp.com/status';
+  statusUrl: string = 'https://tasklist-api.herokuapp.com/status';
 
   constructor(private http: HttpClient) { }
 
-  generateCombo = () => {return this.http.get<Status[]>(this.taskUrl)}
+  generateCombo = () => {return this.http.get<Status[]>(this.statusUrl)}
 
 }
